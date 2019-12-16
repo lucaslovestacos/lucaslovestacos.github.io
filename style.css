@@ -1,20 +1,4 @@
-p {
-      font-family: Arial;
-}
-
-h1 {
-  color: maroon;
-}
-
-.title {
-  color: teal;
-}
-
-.uppercase {
-  text-transform: uppercase;
-}
-
-#article-title {
-  font-family: cursive;
-  text-transform: capitalize;
+.header {
+      font-family: Trebuchet MS;
+      color: #b399ff;
 }
