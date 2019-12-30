@@ -1,64 +1,64 @@
 <html>
   
-<body>
+  <body>
 
 
-<center>  
-<h1 style="line-height:1"> Kiwi's Fun and Epic Art Streaming Tool! </h1>
-</center>
+  <center>  
+    <h1 style="line-height:1"> Kiwi's Fun and Epic Art Streaming Tool! </h1>
+  </center>
 
-<p style="line-height:.5"><font size="3"> Version 1.2 </p>
+  <p style="line-height:.5"><font size="3"> Version 1.2 </p>
   
-<p id="output">Press Generate!</p>
+  <p id="output">Press Generate!</p>
   
-<p><font size="2"><a href="https://github.com/lucaslovestacos/lucaslovestacos.github.io/blob/master/KiwisFunAndEpicArtStreamingTool.html">Source Code</a></p>
+  <form>
+    <input type="button" value="Generate" onclick="msg()">
+  </form>
   
-<form>
-  <input type="button" value="Generate" onclick="msg()">
-</form>
+  <p><font size="2"><a href="https://github.com/lucaslovestacos/lucaslovestacos.github.io/blob/master/KiwisFunAndEpicArtStreamingTool.html">Source Code</a></p>
   
-<script>
-var peopleArray = [
-  "Markiplier",
-  "CaptainSparklez",
-  "Wilbur Soot",
-  "CallMeCarson",
-  "PewDiePie",
-  "Joe Swanson",
-  "Yourself",
-  "Dan Howell",
-  "A chat member",
-  "A dog",
-  "James Charles",
-  "Technoblade"
-];
+  <script>
+    var peopleArray = [
+     "Markiplier",
+     "CaptainSparklez",
+     "Wilbur Soot",
+     "CallMeCarson",
+     "PewDiePie",
+     "Joe Swanson",
+     "Yourself",
+     "Dan Howell",
+     "A chat member",
+     "A dog",
+     "James Charles",
+     "Technoblade"
+   ];
   
-var actionArray = [
-  "eating a burrito.",
-  "in Spain.",
-  "playing Minecraft.",
-  "doing stand-up comedy.",
-  "literally dying.",
-  "being uncomfortable.",
-  "doing squats.",
-  "getting stalked.",
-  "reminiscing.",
-  "yelling.",
-  "gaming.",
-  "being stressed.",
-  "doing taxes."
-];
+   var actionArray = [
+     "eating a burrito.",
+     "in Spain.",
+     "playing Minecraft.",
+     "doing stand-up comedy.",
+     "literally dying.",
+     "being uncomfortable.",
+     "doing squats.",
+     "getting stalked.",
+     "reminiscing.",
+     "yelling.",
+     "gaming.",
+     "being stressed.",
+     "doing taxes."
+    ];
   
-document.body.style.color = '#000000';
-document.body.style.textAlign = "center";
-document.body.style.font = "22px calibri, serif"
+    document.body.style.color = '#000000';
+    document.body.style.textAlign = "center";
+    document.body.style.font = "22px calibri, serif"
   
-function msg() {
-  var randomName = peopleArray[Math.floor(Math.random()*peopleArray.length)];
-  var randomAction = actionArray[Math.floor(Math.random()*actionArray.length)];
-  document.getElementById("output").innerHTML = randomName + " " + randomAction;
-  document.getElementById("output").style.lineHeight = "1";
-}
-</script>
-</body>
+    function msg() {
+    var randomName = peopleArray[Math.floor(Math.random()*peopleArray.length)];
+    var randomAction = actionArray[Math.floor(Math.random()*actionArray.length)];
+    document.getElementById("output").innerHTML = randomName + " " + randomAction;
+    document.getElementById("output").style.lineHeight = "1";
+  }
+  </script>
+ </body>
 </html>
