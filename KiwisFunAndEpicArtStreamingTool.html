@@ -1,11 +1,15 @@
 <html>
+  
+<body>
 
 <center>  
 <h1> Kiwi's Fun and Epic Art Streaming Tool! </h1>
 </center>
   
-<body>
-
+<form>
+  <input type="button" value="Generate" onclick="msg()">
+</form>
+  
 <script>
 var peopleArray = [
   "Markiplier",
@@ -31,7 +35,10 @@ var randomAction = actionArray[Math.floor(Math.random()*actionArray.length)];
   
 document.body.style.textAlign = "center";
 document.body.style.font = "44px calibri, serif"
-document.body.innerHTML = randomName + " " + randomAction;
+  
+function msg() {
+  document.body.innerHTML = randomName + " " + randomAction;
+}
 </script>
 </body>
 </html>
