@@ -2,11 +2,12 @@
   
 <body>
 
+
 <center>  
-<h1> Kiwi's Fun and Epic Art Streaming Tool! </h1>
+<h1 style="line-height:1"> Kiwi's Fun and Epic Art Streaming Tool! </h1>
 </center>
 
-<h6> Version 1.1 </h6>
+<p style="line-height:.5"><font size="3"> Version 1.1 </p>
   
 <p id="output">Press Generate!</p>
   
@@ -48,12 +49,13 @@ var actionArray = [
   
 document.body.style.color = '#000000';
 document.body.style.textAlign = "center";
-document.body.style.font = "44px calibri, serif"
+document.body.style.font = "22px calibri, serif"
   
 function msg() {
   var randomName = peopleArray[Math.floor(Math.random()*peopleArray.length)];
   var randomAction = actionArray[Math.floor(Math.random()*actionArray.length)];
   document.getElementById("output").innerHTML = randomName + " " + randomAction;
+  document.getElementById("output").style.lineHeight = "1";
 }
 </script>
 </body>
