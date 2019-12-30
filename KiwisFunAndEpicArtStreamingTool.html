@@ -13,7 +13,7 @@ var actionArray = [
   "Action",
   "Test Again"
 ];
-
+  
 document.body.style.color = '#000000';
 
 var randomName = peopleArray[Math.floor(Math.random()*peopleArray.length)];
@@ -21,7 +21,7 @@ var randomAction = actionArray[Math.floor(Math.random()*actionArray.length)];
   
 document.body.style.textAlign = "center";
 document.body.style.font = "44px calibri, serif"
-document.body.innerHTML = randomName + randomAction;
+document.body.innerHTML = randomName + " " + randomAction;
 </script>
 </body>
 </html>
