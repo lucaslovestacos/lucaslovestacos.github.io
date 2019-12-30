@@ -6,6 +6,8 @@
 <h1> Kiwi's Fun and Epic Art Streaming Tool! </h1>
 </center>
   
+<p id="output">Press Generate!</p>
+  
 <form>
   <input type="button" value="Generate" onclick="msg()">
 </form>
@@ -29,15 +31,13 @@ var actionArray = [
 ];
   
 document.body.style.color = '#000000';
-
-var randomName = peopleArray[Math.floor(Math.random()*peopleArray.length)];
-var randomAction = actionArray[Math.floor(Math.random()*actionArray.length)];
-  
 document.body.style.textAlign = "center";
 document.body.style.font = "44px calibri, serif"
   
 function msg() {
-  document.body.innerHTML = randomName + " " + randomAction;
+  var randomName = peopleArray[Math.floor(Math.random()*peopleArray.length)];
+  var randomAction = actionArray[Math.floor(Math.random()*actionArray.length)];
+  document.getElementById("output").innerHTML = randomName + " " + randomAction;
 }
 </script>
 </body>
