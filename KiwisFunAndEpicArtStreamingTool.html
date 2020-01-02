@@ -10,12 +10,12 @@
   <p style="line-height:.5"><font size="3"> Version 1.5 </p>
   
   <p id="output">Press Generate!</p>
-  
-  <p id="amount"></p> 
     
   <form>
     <input type="button" value="Generate" onclick="msg()">
   </form>
+  
+  <p id="amount"></p> 
   
   <p><font size="2"><a href="https://github.com/lucaslovestacos/lucaslovestacos.github.io/blob/master/KiwisFunAndEpicArtStreamingTool.html">Source Code</a></p>
   
@@ -125,16 +125,15 @@
      "airbending.",
      "firebending.",
      "earthbending.",
-     "having a feast.",
-     "
+     "having a feast."
     ];
-  
-    document.getElementById("amount").innerHTML = "There are currently " + peopleArray.length + " names and " + actionArray.length + " situations.";
     
     document.body.style.color = '#000000';
     document.body.style.textAlign = "center";
     document.body.style.font = "22px calibri, serif"
-  
+    
+    document.getElementById("amount").innerHTML = "There are currently " + peopleArray.length + " names and " + actionArray.length + " situations.";
+    
     function msg() {
     var randomName = peopleArray[Math.floor(Math.random()*peopleArray.length)];
     var randomAction = actionArray[Math.floor(Math.random()*actionArray.length)];
