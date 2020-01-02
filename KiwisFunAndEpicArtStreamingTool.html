@@ -7,10 +7,12 @@
     <h1 style="line-height:1"> Kiwi's Fun and Epic Art Streaming Tool! </h1>
   </center>
 
-  <p style="line-height:.5"><font size="3"> Version 1.4.3 </p>
+  <p style="line-height:.5"><font size="3"> Version 1.5 </p>
   
   <p id="output">Press Generate!</p>
   
+  <p id="amount"></p> 
+    
   <form>
     <input type="button" value="Generate" onclick="msg()">
   </form>
@@ -55,7 +57,22 @@
       "Toriel",
       "Mario",
       "Peach",
-      "Jack Douglass"
+      "Jack Douglass",
+      "Peppa Pig",
+      "Popeye",
+      "Isabelle (Animal Crossing)",
+      "Ferb (Phineas and Ferb)",
+      "Inuyasha",
+      "Aang (The Last Airbender)",
+      "Charmander",
+      "Detective Pikachu",
+      "Pikachu",
+      "K.K. Slider",
+      "An Inkling",
+      "The Squid Sisters",
+      "Off The Hook (Splatoon 2)",
+      "The Twitch Logo",
+      "Susan Wojcicki"
    ];
   
    var actionArray = [
@@ -101,9 +118,19 @@
      "drawing.",
      "skateboarding.",
      "dreaming.",
-     "lighting a candle."
+     "lighting a candle.",
+     "feeding a squirrel.",
+     "freeing animals from a zoo.",
+     "waterbending.",
+     "airbending.",
+     "firebending.",
+     "earthbending.",
+     "having a feast.",
+     "
     ];
   
+    document.getElementById("amount").innerHTML = "There are currently " + peopleArray.length + " names and " + actionArray.length + " situations."
+    
     document.body.style.color = '#000000';
     document.body.style.textAlign = "center";
     document.body.style.font = "22px calibri, serif"
