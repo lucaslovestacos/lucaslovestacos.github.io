@@ -132,6 +132,7 @@
     document.body.style.textAlign = "center";
     document.body.style.font = "22px calibri, serif"
     document.getElementById("output").style.font = "44px calibri, serif"
+    document.getElementById("output").style.lineHeight = "1";
     
     document.getElementById("amount").innerHTML = "There are currently " + peopleArray.length + " names and " + actionArray.length + " situations.";
     
@@ -139,7 +140,6 @@
     var randomName = peopleArray[Math.floor(Math.random()*peopleArray.length)];
     var randomAction = actionArray[Math.floor(Math.random()*actionArray.length)];
     document.getElementById("output").innerHTML = randomName + " " + randomAction;
-    document.getElementById("output").style.lineHeight = "1";
   }
   </script>
  </body>
