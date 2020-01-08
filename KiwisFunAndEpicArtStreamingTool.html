@@ -1,237 +1,239 @@
 <html>
-  
-  <body>
-    
-  <style>
-body {
-  background-color: #fbeaf0;
-}
+ 
+	<body>
+ 
+		<style>
+			body {
+				background-color: #fbeaf0;
+			}
 
-.button {
-  background-color: white; ;
-  border: 3px solid #40e0d0;
-  color: black;
-  padding: 9px 36px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 8px;
-  -webkit-transition-duration: 0.4s; /* Safari */
-  transition-duration: 0.4s;
-  cursor: pointer;
-  -webkit-user-select: none; /* Safari 3.1+ */
-  -moz-user-select: none; /* Firefox 2+ */
-  -ms-user-select: none; /* IE 10+ */
-  user-select: none; /* Standard syntax */
-}
-  .button:hover {
-    background-color: #21ccbb;
-    color: white;
-    border: 3px solid #21ccbb;
-  </style>
-    
-    
-  <link rel="icon" href="https://raw.githubusercontent.com/lucaslovestacos/lucaslovestacos.github.io/master/icon.jpg">  
-    
-    <br>
-    <title> Kiwi's Fun And Epic Art Streaming Tool </title>
-    
-  <center>  
-    <h1 style="line-height:1"> Kiwi's Fun and Epic Art Streaming Tool! </h1>
-  </center>
+			.button {
+				background-color: white; ;
+				border: 3px solid #40e0d0;
+				color: black;
+				padding: 9px 36px;
+				text-align: center;
+				text-decoration: none;
+				display: inline-block;
+				font-size: 16px;
+				margin: 4px 2px;
+				cursor: pointer;
+				border-radius: 8px;
+				-webkit-transition-duration: 0.4s; /* Safari */
+				transition-duration: 0.4s;
+				cursor: pointer;
+				-webkit-user-select: none; /* Safari 3.1+ */
+				-moz-user-select: none; /* Firefox 2+ */
+				-ms-user-select: none; /* IE 10+ */
+				user-select: none; /* Standard syntax */
+			}
+            
+			.button:hover {
+				background-color: #21ccbb;
+				color: white;
+				border: 3px solid #21ccbb;
+			</style>
+ 
+ 
+			<link rel="icon" href="https://raw.githubusercontent.com/lucaslovestacos/lucaslovestacos.github.io/master/icon.jpg"> 
+ 
+			<br>
+			<title> Kiwi's Fun And Epic Art Streaming Tool </title>
 
-  <p style="line-height:.5"><font size="3"> Version 1.7.5 </p>
-  
-  <p id="output">Press Generate!</p>
-    
-  <button class="button" onclick="msg()"> Generate </button>
-  
-  <p id="amount"></p> 
-  
-  <p><font size="2"><a href="https://lucaslovestacos.github.io/MyProjects.html">Other Projects</a></p>
-  
-  <script>
-    var peopleArray = [
-      "Markiplier",
-      "CaptainSparklez",
-      "Wilbur Soot",
-      "CallMeCarson",
-      "PewDiePie",
-      "Joe Swanson",
-      "Yourself",
-      "Dan Howell",
-      "Phil Lester",
-      "A chat member",
-      "A dog",
-      "James Charles",
-      "Technoblade",
-      "Chris Hansen",
-      "Elon Musk",
-      "theodd1sout",
-      "Barack Obama",
-      "Casey Niestat",
-      "Ash Ketchum",
-      "MrBeast",
-      "Filthy Frank",
-      "iDubbbz",
-      "MaxMoeFoe",
-      "Aspen",
-      "Little Knox",
-      "CaptainSparklez (Minecraft Skin)",
-      "Danny DeVito",
-      "Garfield",
-      "Jon Arbuckle",
-      "Duane 'The Rock' Johnson",
-      "Sans",
-      "Papyrus",
-      "Alphys",
-      "Toriel",
-      "Mario",
-      "Peach",
-      "Jack Douglass",
-      "Peppa Pig",
-      "Popeye",
-      "Isabelle (Animal Crossing)",
-      "Ferb (Phineas and Ferb)",
-      "Inuyasha",
-      "Aang (The Last Airbender)",
-      "Charmander",
-      "Detective Pikachu",
-      "Pikachu",
-      "K.K. Slider",
-      "An Inkling",
-      "The Squid Sisters",
-      "Off The Hook (Splatoon 2)",
-      "The Twitch Logo",
-      "Susan Wojcicki",
-      "A Creeper",
-      "An Enderman",
-      "The Ender Dragon",
-      "The Wither",
-      "The Monopoly Guy",
-      "JSchlatt",
-      "The Blandest Man Ever",
-      "Freddy Fazbear",
-      "Ninja",
-      "Mordecai (Regular Show)",
-      "Rigby (Regular Show)",
-      "A Knight",
-      "Teachnoblade",
-      "Minecraft Steve",
-      "Goofy",
-      "Max (A Goofy Movie)",
-      "Drake (Drake and Josh)",
-      "Josh (Drake and Josh)",
-      "Jesse (Team Rocket)",
-      "James (Team Rocket)",
-      "Shia",
-      "A Vampire",
-      "Kagome",
-      "Miroku",
-      "Sango",
-      "Shippo",
-      "Anon"
-   ];
-  
-  var countryArray = [
-    "the United States",
-    "Spain",
-    "France",
-    "Germany",
-    "Great Britian",
-    "Russia",
-    "Mexico",
-    "Brazil",
-    "Australia",
-    "China",
-    "Japan"
-  ];
-    
-   var actionArray = [
-     "eating a burrito.",
-     "in " + countryArray[Math.floor(Math.random()*countryArray.length)] + ".",
-     "playing Minecraft.",
-     "doing stand-up comedy.",
-     "literally dying.",
-     "being uncomfortable.",
-     "doing squats.",
-     "getting stalked.",
-     "reminiscing.",
-     "yelling.",
-     "gaming.",
-     "being stressed.",
-     "doing taxes.",
-     "in a sauna.",
-     "parachuting.",
-     "on the Moon.",
-     "suffocating.",
-     "crying.",
-     "farming.",
-     "breaking the law.",
-     "killing " + peopleArray[Math.floor(Math.random()*peopleArray.length)] + ".",
-     "cosplaying as " + peopleArray[Math.floor(Math.random()*peopleArray.length)] + ".",
-     "eating a messy Subway footlong.",
-     "doing an ad for RAID: Shadow Legends.",
-     "playing RAID: Shadow Legends.",
-     "running from the police.",
-     "sleeping.",
-     "breaking and entering.",
-     "breaking a bone.",
-     "messing up a joke.",
-     "swimming.",
-     "hugging " + peopleArray[Math.floor(Math.random()*peopleArray.length)] + ".",
-     "licking a doorknob.",
-     "doing ahegao.",
-     "eating cake.",
-     "making a TikTok.",
-     "watering plants.",
-     "in Walmart.",
-     "speeding.",
-     "drawing.",
-     "skateboarding.",
-     "dreaming.",
-     "lighting a candle.",
-     "feeding a squirrel.",
-     "freeing animals from a zoo.",
-     "waterbending.",
-     "airbending.",
-     "firebending.",
-     "earthbending.",
-     "having a feast.",
-     "witnessing the bite of '87.",
-     "streaming on Twitch.",
-     "drawing " + peopleArray[Math.floor(Math.random()*peopleArray.length)] + ".",
-     "at VidCon.",
-     "at TwitchCon.",
-     "googling something.",
-     "being objectively wrong.",
-     "marching in a protest.",
-     "watching a movie.",
-     "rollerblading.",
-     "getting mugged.",
-     "getting mugged by " + peopleArray[Math.floor(Math.random()*peopleArray.length)] + ".",
-     "digging straight down.",
-     "playing piano.",
-     "playing guitar.",
-     "rapping."
-    ];
-    
-    document.body.style.color = '#000000';
-    document.body.style.textAlign = "center";
-    document.body.style.font = "22px calibri, serif"
-    document.getElementById("output").style.font = "44px calibri, serif"
-    document.getElementById("output").style.lineHeight = "1";
-    
-    document.getElementById("amount").innerHTML = "There are currently " + peopleArray.length + " names and " + (actionArray.length+countryArray.length) + " situations.";
-    
-    function msg() {
-    var randomName = peopleArray[Math.floor(Math.random()*peopleArray.length)];
-    var randomAction = actionArray[Math.floor(Math.random()*actionArray.length)];
-    document.getElementById("output").innerHTML = randomName + " " + randomAction;
-  }
-  </script>
- </body>
+			<center> 
+				<h1 style="line-height:1"> Kiwi's Fun and Epic Art Streaming Tool! </h1>
+			
+
+				<p style="line-height:.5"><font size="3"> Version 1.7.5 </p>
+ 
+				<p id="output">Press Generate!</p>
+ 
+				<button class="button" onclick="msg()"> Generate </button>
+
+				<p id="amount"></p> 
+
+				<p><font size="2"><a href="https://lucaslovestacos.github.io/MyProjects.html">Other Projects</a></p>
+ 
+				<script>
+					var peopleArray = [
+						"Markiplier",
+						"CaptainSparklez",
+						"Wilbur Soot",
+						"CallMeCarson",
+						"PewDiePie",
+						"Joe Swanson",
+						"Yourself",
+						"Dan Howell",
+						"Phil Lester",
+						"A chat member",
+						"A dog",
+						"James Charles",
+						"Technoblade",
+						"Chris Hansen",
+						"Elon Musk",
+						"theodd1sout",
+						"Barack Obama",
+						"Casey Niestat",
+						"Ash Ketchum",
+						"MrBeast",
+						"Filthy Frank",
+						"iDubbbz",
+						"MaxMoeFoe",
+						"Aspen",
+						"Little Knox",
+						"CaptainSparklez (Minecraft Skin)",
+						"Danny DeVito",
+						"Garfield",
+						"Jon Arbuckle",
+						"Duane 'The Rock' Johnson",
+						"Sans",
+						"Papyrus",
+						"Alphys",
+						"Toriel",
+						"Mario",
+						"Peach",
+						"Jack Douglass",
+						"Peppa Pig",
+						"Popeye",
+						"Isabelle (Animal Crossing)",
+						"Ferb (Phineas and Ferb)",
+						"Inuyasha",
+						"Aang (The Last Airbender)",
+						"Charmander",
+						"Detective Pikachu",
+						"Pikachu",
+						"K.K. Slider",
+						"An Inkling",
+						"The Squid Sisters",
+						"Off The Hook (Splatoon 2)",
+						"The Twitch Logo",
+						"Susan Wojcicki",
+						"A Creeper",
+						"An Enderman",
+						"The Ender Dragon",
+						"The Wither",
+						"The Monopoly Guy",
+						"JSchlatt",
+						"The Blandest Man Ever",
+						"Freddy Fazbear",
+						"Ninja",
+						"Mordecai (Regular Show)",
+						"Rigby (Regular Show)",
+						"A Knight",
+						"Technoblade",
+						"Minecraft Steve",
+						"Goofy",
+						"Max (A Goofy Movie)",
+						"Drake (Drake and Josh)",
+						"Josh (Drake and Josh)",
+						"Jesse (Team Rocket)",
+						"James (Team Rocket)",
+						"Shia",
+						"A Vampire",
+						"Kagome",
+						"Miroku",
+						"Sango",
+						"Shippo",
+						"Anon"
+					];
+						 
+					var countryArray = [
+						"the United States",
+						"Spain",
+						"France",
+						"Germany",
+						"Great Britian",
+						"Russia",
+						"Mexico",
+						"Brazil",
+						"Australia",
+						"China",
+						"Japan"
+					];
+ 
+					var actionArray = [
+						"eating a burrito.",
+						"in " + countryArray[Math.floor(Math.random()*countryArray.length)] + ".",
+						"playing Minecraft.",
+						"doing stand-up comedy.",
+						"literally dying.",
+						"being uncomfortable.",
+						"doing squats.",
+						"getting stalked.",
+						"reminiscing.",
+						"yelling.",
+						"gaming.",
+						"being stressed.",
+						"doing taxes.",
+						"in a sauna.",
+						"parachuting.",
+						"on the Moon.",
+						"suffocating.",
+						"crying.",
+						"farming.",
+						"breaking the law.",
+						"killing " + peopleArray[Math.floor(Math.random()*peopleArray.length)] + ".",
+						"cosplaying as " + peopleArray[Math.floor(Math.random()*peopleArray.length)] + ".",
+						"eating a messy Subway footlong.",
+						"doing an ad for RAID: Shadow Legends.",
+						"playing RAID: Shadow Legends.",
+						"running from the police.",
+						"sleeping.",
+						"breaking and entering.",
+						"breaking a bone.",
+						"messing up a joke.",
+						"swimming.",
+						"hugging " + peopleArray[Math.floor(Math.random()*peopleArray.length)] + ".",
+						"licking a doorknob.",
+						"doing ahegao.",
+						"eating cake.",
+						"making a TikTok.",
+						"watering plants.",
+						"in Walmart.",
+						"speeding.",
+						"drawing.",
+						"skateboarding.",
+						"dreaming.",
+						"lighting a candle.",
+						"feeding a squirrel.",
+						"freeing animals from a zoo.",
+						"waterbending.",
+						"airbending.",
+						"firebending.",
+						"earthbending.",
+						"having a feast.",
+						"witnessing the bite of '87.",
+						"streaming on Twitch.",
+						"drawing " + peopleArray[Math.floor(Math.random()*peopleArray.length)] + ".",
+						"at VidCon.",
+						"at TwitchCon.",
+						"googling something.",
+						"being objectively wrong.",
+						"marching in a protest.",
+						"watching a movie.",
+						"rollerblading.",
+						"getting mugged.",
+						"getting mugged by " + peopleArray[Math.floor(Math.random()*peopleArray.length)] + ".",
+						"digging straight down.",
+						"playing piano.",
+						"playing guitar.",
+						"rapping."
+					];
+
+ 					document.body.style.color = '#000000';
+ 					document.body.style.textAlign = "center";
+ 					document.body.style.font = "22px calibri, serif"
+ 					document.getElementById("output").style.font = "44px calibri, serif"
+ 					document.getElementById("output").style.lineHeight = "1";
+ 
+ 					document.getElementById("amount").innerHTML = "There are currently " + peopleArray.length + " names and " + (actionArray.length+countryArray.length) + " situations.";
+
+ 					function msg() {
+ 					var randomName = peopleArray[Math.floor(Math.random()*peopleArray.length)];
+ 					var randomAction = actionArray[Math.floor(Math.random()*actionArray.length)];
+ 					document.getElementById("output").innerHTML = randomName + " " + randomAction;
+                    }
+				    </script>
+        </center>
+		</body>
 </html>
