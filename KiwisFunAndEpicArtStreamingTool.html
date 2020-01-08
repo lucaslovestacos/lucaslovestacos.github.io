@@ -2,6 +2,23 @@
   
   <body>
     
+  <style>
+.button {
+  background-color: white; ;
+  border: 3px solid #40e0d0;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+  </style>
+    
+    
   <link rel="icon" href="https://raw.githubusercontent.com/lucaslovestacos/lucaslovestacos.github.io/master/icon.jpg">  
     
     <br>
@@ -15,9 +32,7 @@
   
   <p id="output">Press Generate!</p>
     
-  <form>
-    <input type="button" value="Generate" onclick="msg()">
-  </form>
+  <button class="button" onclick="msg()"> Generate </button>
   
   <p id="amount"></p> 
   
