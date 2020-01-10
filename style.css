@@ -10,14 +10,14 @@ body {
 	font-size: 30px;
 	font-style: italic;
 	font-weight: bold;
-	font-family: "calibri";
+	font-family: "Sans-serif";
 }
 
 .content {
 	font-size: 30px;
 	font-style: bold;
 	text-align: center;
-	font-family: "calibri";
+	font-family: "Sans-serif";
 }
 
 .button {
