@@ -24,7 +24,7 @@ body {
 }
 
 .topnav {
-  text-align: right;
+  align-items: right;
   overflow: hidden;
   background-color: #333;
 }
