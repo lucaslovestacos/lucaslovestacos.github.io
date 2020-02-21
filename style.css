@@ -45,6 +45,8 @@ body, html {
   padding: 18px 18px;
   text-decoration: none;
   font-size: 18px;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
 }
 
 .topnav a:hover {
@@ -79,8 +81,8 @@ body, html {
   margin: 4px 2px;
   cursor: pointer;
   border-radius: 8px;
-  -webkit-transition-duration: 0.4s;
-  transition-duration: 0.4s;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
