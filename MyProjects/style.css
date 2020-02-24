@@ -23,6 +23,7 @@
 
 .flappyButton:hover {
   color: white;
+  -webkit-filter: brightness(80%);
 }
 
 .scratchButton {
@@ -51,5 +52,5 @@
 
 .scratchButton:hover {
   color: white;
-  -webkit-filter: brightness(40%);
+  -webkit-filter: brightness(80%);
 }
