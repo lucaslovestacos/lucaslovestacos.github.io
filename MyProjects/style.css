@@ -1,15 +1,13 @@
 .flappyButton {
-   background: url(https://cdn.cogecolive.com/prod-20180515/generic_1526397738636915_ori.jpeg);
-  -webkit-filter: brightness(80%);
+   background: url(https://pngimage.net/wp-content/uploads/2018/06/flappy-bird-background-png.png);
   -webkit-text-stroke: 1px black;
   font-size: 40px;
   font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;
   font-weight: bold;
   background-repeat: no-repeat;
-  background-position: left;
   color: white;
   padding: 80px;
-  text-align: left;
+  text-align: right;
   text-decoration: none;
   cursor: pointer;
   -webkit-transition-duration: 0.2s;
@@ -18,28 +16,25 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  overflow: hidden;
+  object-fit: contain;
   display: flex;
-  width: auto;
+  background-position: bottom;
 }
 
 .flappyButton:hover {
   color: white;
-  -webkit-filter: brightness(40%);
 }
 
 .scratchButton {
-   background: url(https://raw.githubusercontent.com/lucaslovestacos/lucaslovestacos.github.io/master/MyProjects/Screenshot%202020-02-24%20at%2009.36.32.png);
-  -webkit-filter: brightness(80%);
+   background: url(https://github.com/lucaslovestacos/lucaslovestacos.github.io/blob/master/MyProjects/scratch%20BIG.png?raw=true);
   -webkit-text-stroke: 1px black;
   font-size: 40px;
   font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;
   font-weight: bold;
   background-repeat: no-repeat;
-  background-position: left;
   color: white;
   padding: 80px;
-  text-align: left;
+  text-align: right;
   text-decoration: none;
   cursor: pointer;
   -webkit-transition-duration: 0.2s;
@@ -48,9 +43,10 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  overflow: hidden;
+  object-fit: contain;
   display: flex;
-  width: auto;
+  background-position: center;
+  background-size: 100%;
 }
 
 .scratchButton:hover {
