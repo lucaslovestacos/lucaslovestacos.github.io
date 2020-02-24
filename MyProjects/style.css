@@ -1,21 +1,13 @@
-body, html {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-
 .flappyButton {
    background: url(https://cdn.cogecolive.com/prod-20180515/generic_1526397738636915_ori.jpeg);
   -webkit-filter: brightness(80%);
   font-size: 40px;
   font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;
   font-weight: bold;
-  width: 100%;
+  width: 71%;
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: left;
-  margin: 20px;
   color: white;
   padding: 80px;
   text-align: right;
