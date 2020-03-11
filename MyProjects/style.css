@@ -1,3 +1,12 @@
+.button {
+	border: 3px solid #8f48a8;
+}
+            
+.button:hover {
+	background-color: #8f48a8;
+	border: 3px solid #8f48a8;      
+}
+
 .flappyButton {
    background: url(https://pngimage.net/wp-content/uploads/2018/06/flappy-bird-background-png.png);
   -webkit-text-stroke: 1px black;
