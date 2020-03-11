@@ -54,3 +54,32 @@
   color: white;
   -webkit-filter: brightness(80%);
 }
+
+.kiwiButton {
+   background: url(https://pbs.twimg.com/media/EN-ackkWAAA4hT6.jpg);
+  -webkit-text-stroke: 1px black;
+  font-size: 40px;
+  font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;
+  font-weight: bold;
+  background-repeat: no-repeat;
+  color: white;
+  padding: 80px;
+  text-align: right;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  object-fit: contain;
+  display: flex;
+  background-position: top;
+  background-size: 100%;
+}
+
+.kiwiButton:hover {
+  color: white;
+  -webkit-filter: brightness(80%);
+}
