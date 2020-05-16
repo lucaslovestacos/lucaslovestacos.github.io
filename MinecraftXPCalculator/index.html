@@ -3,15 +3,21 @@
 
   <head>
     <link rel="stylesheet" type="text/css" href="style.css">
-    </link>
     <title>Minecraft Experience Calculator</title>
   </head>
 
+<div class="topnav" id="myHeader">
+    <p>Lucas' Site</p>
+    <a href="#about">About</a>
+    <a href="https://lucaslovestacos.github.io/MyProjects/">My Projects</a>
+    <a href="https://lucaslovestacos.github.io/">Home</a>
+  </div>
+
   <body>
-    <div id="header">
-      <h1>Minecraft Experience Calculator</h1>
-    </div>
-    <div id="content">
+    <div class="header">
+				<h1 style="line-height:1"> Minecraft Experience Calculator </h1>
+			</div>
+    <div id="content" class="content">
       <script type="text/javascript">
         function val(id) {
           return document.getElementById(id).value;
@@ -126,7 +132,7 @@
             <td><input id="targetLevel" type="text" size="5"></td>
           </tr>
           <tr>
-            <td colspan="2" style="text-align:right"><input type="button" value="Calculate" onclick="calcAll();"></td>
+            <td colspan="2" style="text-align:center"><input type="button" value="Calculate" onclick="calcAll();" class="button"></td>
           </tr>
         </table>
       </form><br>
