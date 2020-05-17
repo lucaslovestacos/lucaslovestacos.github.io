@@ -18,6 +18,8 @@ body, html {
 
 .content {
   padding: 0px 16px;
+  font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;
+  font-size: 12px;
 }
 
 .topnav {
