@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.dropbtn {
+  background-color: #ba8ed1;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  border: 2px solid #73438c;
+}
+
+.dropdown-content {
+  right: 0;
+  background-color: #f9f9f9;
+  min-width: 400px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content p {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-weight: normal;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropbtn {background-color: #73438c;}
+</style>
+</head>
+<body>
+<h2>Werewolf Rules</h2>
+
+<div class="dropdown" style="float:left;">
+  <button class="dropbtn">Team Information</button>
+  <div class="dropdown-content" style="left:0;">
+    <p>Good (Villagers) - The good team is all the villagers, and anyone on their side. Every day, the villagers vote one or zero people to have hung. Examples are the sheriff, bodyguard, or medic.</p>
+	<p>Bad (Werewolves) - The bad team is all the werewolves, and any of their variants. Every night, the werewolves vote on one person to be killed. All bad roles are told of their teammates, but aren't told exactly what their teammates' roles are.</p>
+	<p>Nonaligned - Any roles that aren't werewolves, but aren't very good either. Examples are the serial killer and the jester.
+</p>
+  </div>
+</div>
+
+<div class="dropdown" style="float:left;">
+  <button class="dropbtn">Good Roles</button>
+  <div class="dropdown-content" style="left:0;">
+    <p>Villager - Your average person. Can't do anything but hope to live.</p>
+    <p>Sheriff - Can shoot anyone they want, but as soon as they do their role is revealed to everyone. Can only shoot twice. You can NOT shoot on the first day.</p>
+	<p>Bodyguard - Can protect anyone he wants, including himself, from being killed by werewolves.</p>
+	<p>Medic - Can revive anyone, as long as the person they are trying to revive was killed the night before.</p>
+	<p><i>Detective</i>- Can reveal anyone's team. Only the detective is told, and must convince everyone of their innocence.</p>
+  </div>
+</div>
+
+<div class="dropdown" style="float:left;">
+  <button class="dropbtn">Bad Roles</button>
+  <div class="dropdown-content" style="left:0;">
+	<p>Werewolf - Votes every night to have someone killed.</p>
+	<p>Alpha Werewolf - Votes every night to have someone killed. Their vote counts as two.</p>
+	<p><i>Werewolf Detective</i> - Doesn't vote like the other werewolves. Instead, at night they can reveal someone else's team.</p>
+  </div>
+</div>
+
+<div class="dropdown" style="float:left;">
+  <button class="dropbtn">Nonaligned Roles</button>
+  <div class="dropdown-content" style="left:0;">
+	<p>Serial Killer - Kill everyone. Can kill one or zero people during night OR day. If you kill someone during day, your role is revealed.</p>
+	<p>Jester - Die ASAP. As soon as you're dead, you win!</p>
+	<p><i>Medium</i> - Can speak to the dead.</p>
+	<p>Robber - At night, the robber steals a role, which they will imitate the next day.</p>
+  </div>
+</div>
+
+</body>
+</html>
