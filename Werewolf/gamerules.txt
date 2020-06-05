@@ -1,0 +1,32 @@
+**Three Teams:**
+Good (Villagers) - The good team is all the villagers, and anyone on their side. Every day, the villagers vote one or zero people to have hung. Examples are the sheriff, bodyguard, or medic.
+Bad (Werewolves) - The bad team is all the werewolves, and any of their variants. Every night, the werewolves vote on one person to be killed. All bad roles are told of their teammates, but aren't told exactly what their teammates' roles are.
+Nonaligned - Any roles that aren't werewolves, but aren't very good either. Examples are the serial killer and the jester.
+Roles (if a role is italicized, the role is affected by rng):
+There's an 8% chance to get any role EXCEPT villager and werewolf, where you have a 16% chance.
+
+**Good Roles:**
+ Villager - Your average person. Can't do anything but hope to live.
+ Sheriff - Can shoot anyone they want, but as soon as they do their role is revealed to everyone. Can only shoot twice. You can NOT shoot on the first day.
+ Bodyguard - Can protect anyone he wants, including himself, from being killed by werewolves.
+ Medic - Can revive anyone, as long as the person they are trying to revive was killed the night before.
+ *Detective* - Can reveal anyone's team. Only the detective is told, and must convince everyone of their innocence.
+
+**Bad Roles:**
+ Werewolf - Votes every night to have someone killed.
+ Alpha Werewolf - Votes every night to have someone killed. Their vote counts as two.
+ Werewolf Detective - Doesn't vote like the other werewolves. Instead, at night they can reveal someone else's team.
+
+**Nonaligned Roles:**
+ Serial Killer - Kill everyone. Can kill one or zero people during night OR day. If you kill someone during day, your role is revealed.
+ Jester - Die ASAP. As soon as you're dead, you win!
+ *Medium* - Can speak to the dead.
+ Robber - At night, the robber steals a role, which they will imitate the next day.
+
+**Team Turn Order:**
+ Good
+ Nonaligned
+ Bad
+If at ANY point in the game there is an even amount of good players to bad players, werewolves win. EVEN if there is a medic. UNLESS the total amount of players is under 5.
+
+Some games will have an element of RNG in them, which will affect some roles.
