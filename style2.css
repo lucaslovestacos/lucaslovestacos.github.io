@@ -78,3 +78,11 @@
   background-position: top;
   background-size: 100%;
 }
+
+.twitchButton {
+  background: url(https://raw.githubusercontent.com/lucaslovestacos/lucaslovestacos.github.io/master/banner.png);
+  object-fit: contain;
+  display: flex;
+  background-position: top;
+  background-size: 100%;
+}
