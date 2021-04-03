@@ -86,3 +86,11 @@
   background-position: center;
   background-size: 100%;
 }
+
+.wheelButton {
+  background: url(https://raw.githubusercontent.com/lucaslovestacos/lucaslovestacos.github.io/master/wheel/wheel-of-fortune-jeopardy-to-nix-live-audiences.jpg);
+  object-fit: contain;
+  display: flex;
+  background-position: center;
+  background-size: 100%;
+}
