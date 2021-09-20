@@ -94,3 +94,11 @@
   background-position: center;
   background-size: 100%;
 }
+
+.donateButton {
+  background: url(https://raw.githubusercontent.com/lucaslovestacos/lucaslovestacos.github.io/master/donate/banner.png);
+  object-fit: contain;
+  display: flex;
+  background-position: center;
+  background-size: 100%;
+}
