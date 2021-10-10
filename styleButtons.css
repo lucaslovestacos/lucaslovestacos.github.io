@@ -95,6 +95,14 @@
   background-size: 100%;
 }
 
+.tfButton {
+  background: url(https://cdn.cloudflare.steamstatic.com/steam/apps/440/header.jpg?t=1592263852);
+  object-fit: contain;
+  display: flex;
+  background-position: center;
+  background-size: 100%;
+}
+
 .donateButton {
   background: url(https://raw.githubusercontent.com/lucaslovestacos/lucaslovestacos.github.io/master/donate/banner.png);
   object-fit: contain;
