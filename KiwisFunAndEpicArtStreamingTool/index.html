@@ -280,7 +280,15 @@
  					function msg() {
  					var randomName = peopleArray[Math.floor(Math.random()*peopleArray.length)];
  					var randomAction = actionArray[Math.floor(Math.random()*actionArray.length)];
- 					document.getElementById("output").innerHTML = randomName + " " + randomAction;
+					
+					var button = document.querySelector('#ToggleButton');
+					if (button.innerText == "Character + Scene") {
+						document.getElementById("output").innerHTML = randomName + " " + randomAction;
+					} else {
+						document.getElementById("output").innerHTML = randomName;
+					}
+						
+ 					
                     }
 			function sceneToggle() {
 				var button = document.querySelector('#ToggleButton');
