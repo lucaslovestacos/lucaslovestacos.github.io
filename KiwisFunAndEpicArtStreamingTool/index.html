@@ -26,6 +26,7 @@
 				<p id="output">Press Generate!</p>
  
 				<button onclick="msg()" class="button"> Generate </button>
+				<button onclick="sceneToggle()" class="button"> Character + Scene </button>
 
 				<p id="amount"></p> 
 				
@@ -281,6 +282,15 @@
  					var randomAction = actionArray[Math.floor(Math.random()*actionArray.length)];
  					document.getElementById("output").innerHTML = randomName + " " + randomAction;
                     }
+			function sceneToggle() {
+			
+				if (button.innerText == " Character + Scene ") {
+	  				button.innerText = " Character Only ";
+   				} else {
+   	   				button.innerText = " Character + Scene ";
+   				}
+				
+			}
 				    </script>
         	</center>
 		</body>
