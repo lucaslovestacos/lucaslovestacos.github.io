@@ -26,7 +26,7 @@
 				<p id="output">Press Generate!</p>
  
 				<button onclick="msg()" class="button"> Generate </button>
-				<button onclick="sceneToggle()" class="button"> Character + Scene </button>
+				<button id="ToggleButton" onclick="sceneToggle()" class="button"> Character + Scene </button>
 
 				<p id="amount"></p> 
 				
@@ -283,7 +283,7 @@
  					document.getElementById("output").innerHTML = randomName + " " + randomAction;
                     }
 			function sceneToggle() {
-			
+				var button = document.querySelector('#ToggleButton');
 				if (button.innerText == " Character + Scene ") {
 	  				button.innerText = " Character Only ";
    				} else {
