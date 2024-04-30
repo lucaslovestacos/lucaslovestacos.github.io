@@ -1,97 +1,81 @@
-body, html {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
+@font-face {
+    font-family: 'made_tommy_soft';
+    src: url('made_tommy_soft_extrabold_personal_use-webfont.woff2') format('woff2'),
+         url('made_tommy_soft_extrabold_personal_use-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
 }
 
-.header {
-  padding: 20px;
-  text-align: center;
-  background: #b399ff;
-  color: white;
-  font-size: 30px;
-  font-style: italic;
-  font-weight: bold;
-  font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;
+body {
+	font-family: made_tommy_soft;
+	margin: 0;
 }
 
 .content {
-  font-size: 30px;
-  font-style: bold;
-  text-align: center;
-  font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;
+	padding: 5vw;
+	display: grid;
+	grid-template-columns: 43vw 43vw;
+	justify-content: center;
+	gap: 3vw;
 }
 
-.topnav {
-  font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;
-  overflow: hidden;
-  background-color: #333;
+.grid-item:nth-child(1) {
+	border-color: #F4B1C5;
 }
 
-.topnav p {
-  float: left;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 0px 16px;
-  text-decoration: none;
-  font-size: 18px;
+.grid-item:nth-child(1):hover {
+	background-color: #F4B1C5;
 }
 
-.topnav a {
-  float: right;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 18px 18px;
-  text-decoration: none;
-  font-size: 18px;
-  -webkit-transition-duration: 0.2s;
-  transition-duration: 0.2s;
+.grid-item:nth-child(2) {
+	border-color: #FFEBB9;
 }
 
-.topnav a:hover {
-  background-color: #d2c9d6;
-  color: black;
+.grid-item:nth-child(2):hover {
+	background-color: #FFEBB9;
 }
 
-.topnav a.active {
-  background-color: #8f48a8;
-  color: white;
+.grid-item:nth-child(3) {
+	border-color: #D0F3B0;
 }
 
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
+.grid-item:nth-child(3):hover {
+	background-color: #D0F3B0;
 }
 
-.sticky + .content {
-  padding-top: 102px;
+.grid-item:nth-child(4) {
+	border-color: #A8B0DD;
+}
+
+.grid-item:nth-child(4):hover {
+	background-color: #A8B0DD;
+}
+
+.header {
+	padding: 25vh;
+	text-align: center;
+	background: #00000055;
+	color: white;
+	font-size: 30px;
+	box-shadow: 0px 5px 5px 0px #9D8E9E;
 }
 
 .button {
-  background-color: white;
-  border-radius: 8px;
-  font-size: 16px;
-  color: black;
-  padding: 9px 36px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  margin: 4px 2px;
-  cursor: pointer;
-  -webkit-transition-duration: 0.2s;
-  transition-duration: 0.2s;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+	background-color: white;
+	transition-duration: 0.4s;
+	border: 8px solid white;
+	border-radius: 32px;
+	color: black;
+	padding: 10vh 10vw;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 48px;
+	box-shadow: 0px 10px 10px -3px #9D8E9E;
 }
 
 .button:hover {
-  color: white;
-}
-
-.footer {
-  display: inline-block;
+	color: white;
+	background-color: white;
 }
