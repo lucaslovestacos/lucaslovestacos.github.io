@@ -7,6 +7,15 @@
 
 }
 
+@font-face {
+
+	font-family: 'mts_light';
+	src: url('fonts/mts.otf');
+	font-weight: normal;
+	font-style: normal;
+	
+}
+
 :root {
 	--gray-color: #555555;
 	--projects-color: #F4B1C5;
@@ -21,6 +30,8 @@ body {
 }
 
 .content {
+
+	font-family: mts_light;
 	padding: 5vw;
 	display: grid;
 	grid-template-columns: 43vw 43vw;
