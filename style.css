@@ -91,6 +91,7 @@ body {
 }
 
 .button {
+	font-family: made_tommy_soft;
 	background-color: white;
 	text-align: center;
 	transition-duration: 0.4s;
