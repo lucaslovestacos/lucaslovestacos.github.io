@@ -3,7 +3,7 @@
  
 	<body>
  		<head>
-			<link href="../style.css" type="text/css" rel="stylesheet">
+			<link href="../legacy/style.css" type="text/css" rel="stylesheet">
 			<link href="kiwiStyle.css" type="text/css" rel="stylesheet">
 			<script data-ad-client="ca-pub-2650211375074849" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 		</head>
@@ -11,14 +11,14 @@
  			<title> Crumb's Fun and Epic Art Tool! </title>
             
 	  <div class="topnav" id="myHeader">
-    <p>Lucas' Site</p>
+    <p>crumbskull site (funny)</p>
     <a href="#about">About</a>
     <a href="https://lucaslovestacos.github.io/">Home</a>
   </div>
 		
             <div class="header">
 				<h1 style="line-height:1"> Crumb's Fun and Epic Art Tool! </h1>
-                <p style="line-height:.5"><font size="3"> 2.0.0 </p>
+                <p style="line-height:.5"><font size="3"> Version 2.0 </p>
 			</div>
 
 			<center> 
@@ -26,6 +26,7 @@
 				<p id="output">Press Generate!</p>
  
 				<button onclick="msg()" class="button"> Generate </button>
+				<button id="ToggleButton" onclick="sceneToggle()" class="button"> Character + Scene </button>
 
 				<p id="amount"></p> 
 				
@@ -43,11 +44,141 @@
 				
 				<p class="footer"><font size="2">© 2025 crumbskull - </p>
 				
-                <p class="footer"><font size="2"><a href="https://lucaslovestacos.github.io/MyProjects/">Other Projects</a></p>
+                <p class="footer"><font size="2"><a href="https://crumbskull.com/">Other Projects</a></p>
 				
                 <script>
+					var colorArray = [
+						"Red",
+						"Orange",
+						"Yellow",
+						"Green",
+						"Blue",
+						"Purple"
+					]
+					
 					var peopleArray = [
-            "Eddy"
+						"Markiplier",
+						"PewDiePie",
+						"Joe Swanson",
+						"Peter Griffin",
+						"Homer Simpson",
+						"Bart Simpson",
+						"Brian Griffin",
+						"Yourself",
+						"Chris Hansen",
+						"Elon Musk",
+						"Barack Obama",
+						"MrBeast",
+						"Filthy Frank",
+						"iDubbbz",
+						"Danny DeVito",
+						"Garfield",
+						"Jon Arbuckle",
+						"Duane 'The Rock' Johnson",
+						"Sans",
+						"Papyrus",
+						"Alphys",
+						"Toriel",
+						"Mario",
+						"Peach",
+						"Luigi",
+						"Waluigi",
+						"Wario",
+						"Yoshi",
+						"Isabelle (Animal Crossing)",
+						"Ferb (Phineas and Ferb)",
+						"Pikachu",
+						"K.K. Slider",
+						"An Inkling",
+						"The Squid Sisters",
+						"Off The Hook (Splatoon 2)",
+						"Susan Wojcicki",
+						"A Creeper",
+						"An Enderman",
+						"The Ender Dragon",
+						"The Wither",
+						"The Monopoly Guy",
+						"Jschlatt",
+						"Freddy Fazbear",
+						"Bonnie (FNAF)",
+						"Chica (FNAF)",
+						"Mangle (FNAF)",
+						"Foxy (FNAF)",
+						"Purple Guy (FNAF)",,
+						"Springtrap (FNAF)",
+						"Ninja",
+						"Mordecai (Regular Show)",
+						"Rigby (Regular Show)",
+						"Technoblade",
+						"Minecraft Steve",
+						"Herobrine",
+						"Goofy",
+						"Max (A Goofy Movie)",
+						"Drake (Drake and Josh)",
+						"Josh (Drake and Josh)",
+						"Jesse (Team Rocket)",
+						"James (Team Rocket)",
+						"Kirby",
+						"Meta Knight",
+						"King Dedede",
+						"Bob Ross",
+						"Brody Foxx (Yo Mama!)",
+						"The Annoying Orange",
+						"A Kiwi",
+						"A Delicious Subway Footlong",
+						"Your Friend",
+						"TedNivision",
+						"cscoop",
+						"Jawsh",
+						"traves",
+						"undrscrMason",
+						"Slimecicle",
+						"Wilbur Soot",
+						"Dream",
+						"Fundy",
+						"Courage the Cowardly Dog",
+						"Doom Guy",
+						"Chad",
+						"tommyinnit",
+						"tubbo",
+						"cuptoast",
+						"Ph1LZa",
+						"" + colorArray[Math.floor(Math.random()*colorArray.length)] + " Among Us Impostor",
+						"" + colorArray[Math.floor(Math.random()*colorArray.length)] + " Among Us Crewmate",
+						"Boyfriend (FNF)",
+						"Girlfriend (FNF)",
+						"Jigglypuff",
+						"Captain Falcon",
+						"Fox McCloud",
+						"Falco Lombardi",
+						"Slippy Toad",
+						"Peppy Hare",
+						"Banjo & Kazooie",
+						"crumbskull",
+						"Cloud Strife",
+						"Tifa Lockhart",
+						"Barret Wallace",
+						"Aerith Gainsborough",
+						"Scout (TF2)",
+						"Soldier (TF2)",
+						"Pyro (TF2)",
+						"Demoman (TF2)",
+						"Heavy (TF2)",
+						"Engineer (TF2)",
+						"Medic (TF2)",
+						"Sniper (TF2)",
+						"Spy (TF2)",
+						"a Fall Guy",
+						"Burger Pants",
+						"Sonic the Hedgehog",
+						"Tails the Fox",
+						"Shadow the Hedgehog",
+						"Knuckles the Echidna",
+						"Vector the Crocodile",
+						"Charmy Bee",
+						"Parappa Rappa",
+						"Amy Rose",
+						"Ronald Reagan"
 					];
 						 
 					var countryArray = [
@@ -65,17 +196,11 @@
 						"The Nether",
 						"Minecraft",
 						"The End",
-						"Hell"
+						"Hell",
+						"Canada",
+						"19.57857, 83.25381",
+						"a jar"
 					];
-				
-					var colorArray = [
-						"red",
-						"orange",
-						"yellow",
-						"green",
-						"blue",
-						"purple"
-					]
  
 					var verbArray = [
   						"being", "having", "doing", "saying", "going", "building", "getting", "breaking", 
