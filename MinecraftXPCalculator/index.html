@@ -1,0 +1,524 @@
+<!DOCTYPE HTML>
+<html>
+
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Minecraft Experience Calculator</title>
+  </head>
+
+<div class="topnav" id="myHeader">
+    <p>Lucas' Site</p>
+    <a href="#about">About</a>
+    <a href="https://lucaslovestacos.github.io/">Home</a>
+  </div>
+
+  <body>
+    <div class="header">
+				<h1 style="line-height:1"> Minecraft Experience Calculator </h1>
+			</div>
+    <div id="content" class="content">
+      <script type="text/javascript">
+        function val(id) {
+          return document.getElementById(id).value;
+        }
+
+        function setText(id, s) {
+          document.getElementById(id).innerHTML = s + "";
+        }
+
+        function calcAll() {
+          var curLevel = parseFloat(val("curLevel"));
+          var targetLevel = parseFloat(val("targetLevel"));
+          curXp = levelXp(curLevel);
+          targetXp = levelXp(targetLevel);
+          var leftXp = targetXp - curXp;
+
+          setText("currentXp", curXp);
+          setText("targetXp", targetXp);
+          setText("leftXp", leftXp);
+          calcOne("slimeTiny", 1.0);
+          calcOne("slimeSmall", 2.0);
+          calcOne("slimeBig", 4.0);
+          calcOne("blaze", 10.0);
+          calcOne("dragon", 12000.0);
+	  calcOne("dragonReborn", 500.0); 
+          calcOne("wither", 50.0);
+          calcOne("ravager", 20.0);
+          calcOne("hostile", 5.0);
+          calcOne("babyHostile", 12.0);
+          calcOne("animal", 2.0);
+
+          calcOne("oreCoal", 1.0);
+          calcOne("oreRedstone", 3.0);
+          calcOne("oreLapis", 3.5);
+          calcOne("oreQuartz", 3.5);
+          calcOne("oreEmerald", 5.0);
+          calcOne("oreDiamond", 5.0);
+
+          calcOne("stone", 0.1);
+          calcOne("tools", 0.1);
+          calcOne("glass", 0.1);
+          calcOne("charcoal", 0.15);
+	  calcOne("wetSponge", 0.15);
+          calcOne("lapisLazuli", 0.2);
+          calcOne("brick", 0.3);
+          calcOne("cookedFood", 0.35);
+          calcOne("redstone", 0.7);
+          calcOne("iron", 0.7);
+          calcOne("cactusDye", 1.0);
+          calcOne("gold", 1.0);
+          calcOne("diamond", 1.0);
+          calcOne("debris", 2.0);
+
+          calcOne("completeCatalogue", 50.0);
+          calcOne("greatView", 50.0);
+          calcOne("returnSender", 50.0);
+          calcOne("sniperDuel", 50.0);
+          calcOne("twoBirds", 65.0);
+          calcOne("arbalistic", 85.0);
+          calcOne("balancedDiet", 100.0);
+          calcOne("furiousCocktail", 100.0);
+          calcOne("hero", 100.0);
+          calcOne("monstersHunted", 100.0);
+          calcOne("seriousDedication", 100.0);
+          calcOne("subspaceBubble", 100.0);
+          calcOne("twoBy", 100.0);
+          calcOne("uneasyAlliance", 100.0);
+          calcOne("adventuringTime", 500.0);
+          calcOne("howGet", 1000.0);
+
+          calcOne("catchFish", 2.5);
+          calcOne("mobBreed", 4);
+          calcOne("villagerTrade", 4.5);
+          calcOne("potion", 7.0);
+          calcOne("spawner", 29.0);
+        }
+
+        function calcOne(what, xpEach) {
+          var count = Math.ceil((targetXp - curXp) / xpEach);
+          setText(what + "Count", count);
+        }
+
+        function levelXp(level) {
+          var whole = Math.floor(level);
+          var partial = level - whole;
+
+          var wholeXp = wholeLevelXp(whole);
+          var nextXp = wholeLevelXp(whole + 1) - wholeXp;
+          var partialXp = nextXp * partial;
+
+          return wholeXp + partialXp;
+        }
+
+        function wholeLevelXp(whole) {
+          var low = whole;
+          var mid = Math.max(0, whole - 15);
+          var high = Math.max(0, whole - 30);
+
+          return low * 17 +
+            (mid * (mid - 1) / 2) * 3 +
+            (high * (high - 1) / 2) * 7;
+        }
+
+      </script>
+      <p>Enter your current level and the level you wish to reach. You can also enter fractional levels if you want more precision.</p>
+	    <p> Based on <a href="http://www.pernsteiner.org/minecraft/levelcalc.html">Pernsteiner's Experience Calculator</a> </p>
+      <form>
+	<center>      
+        <table>
+          <tr>
+            <td>Current Level: </td>
+            <td><input id="curLevel" type="text" size="5"></td>
+          </tr>
+          <tr>
+            <td>Target Level: </td>
+            <td><input id="targetLevel" type="text" size="5"></td>
+          </tr>
+          </table>
+          <center>
+          <tr>
+            <td colspan="2" style="text-align:center"><input type="button" value="Calculate" onclick="calcAll();" class="button"></td>
+          </tr>
+          </center>
+      </center>
+      </form>
+      
+      <div class="table2">
+      <center>
+      <br>
+      <table>
+        <tr>
+          <td>Current XP</td>
+          <td style="text-align: right; width: 4em"><span id="currentXp">-</span></td>
+        </tr>
+        <tr>
+          <td>Target XP</td>
+          <td style="text-align: right"><span id="targetXp">-</span></td>
+        </tr>
+        <tr>
+          <td>XP Remaining</td>
+          <td style="text-align: right"><span id="leftXp">-</span></td>
+        </tr>
+      </table><br>
+      <table>
+        <tr>
+          <th>Action</th>
+          <th colspan="2">XP per action</th>
+          <th>Actions needed</th>
+        </tr>
+
+        <tr>
+          <th colspan="4">Mob Kills</th>
+        </tr>
+        <tr>
+          <td>Tiny Slime</td>
+          <td style="text-align: right">1.0</td>
+          <td></td>
+          <td style="text-align: right"><span id="slimeTinyCount">-</span></td>
+        </tr>
+        <tr>
+          <td>Small Slime</td>
+          <td style="text-align: right">2.0</td>
+          <td></td>
+          <td style="text-align: right"><span id="slimeSmallCount">-</span></td>
+        </tr>
+        <tr>
+          <td>Big Slime</td>
+          <td style="text-align: right">4.0</td>
+          <td></td>
+          <td style="text-align: right"><span id="slimeBigCount">-</span></td>
+        </tr>
+        <tr>
+          <td>Blaze</td>
+          <td style="text-align: right">10.0</td>
+          <td></td>
+          <td style="text-align: right"><span id="blazeCount">-</span></td>
+        </tr>
+        <tr>
+          <td>Ender Dragon</td>
+          <td style="text-align: right">12000.0</td>
+          <td></td>
+          <td style="text-align: right"><span id="dragonCount">-</span></td>
+        </tr>
+	<tr>
+          <td>Ender Dragon (Respawned With Crystals)</td>
+          <td style="text-align: right">500.0</td>
+          <td></td>
+          <td style="text-align: right"><span id="dragonRebornCount">-</span></td>
+        </tr>
+        <tr>
+          <td>Wither</td>
+          <td style="text-align: right">50.0</td>
+          <td></td>
+          <td style="text-align: right"><span id="witherCount">-</span></td>
+        </tr>
+        <tr>
+          <td>Ravager</td>
+          <td style="text-align: right">20.0</td>
+          <td></td>
+          <td style="text-align: right"><span id="ravagerCount">-</span></td>
+        </tr>
+        <tr>
+          <td>Other Hostile</td>
+          <td style="text-align: right">5.0</td>
+          <td></td>
+          <td style="text-align: right"><span id="hostileCount">-</span></td>
+        </tr>
+        <tr>
+          <td>Baby Hostile</td>
+          <td style="text-align: right">12.0</td>
+          <td></td>
+          <td style="text-align: right"><span id="babyHostileCount">-</span></td>
+        </tr>
+        <tr>
+          <td>Animals</td>
+          <td style="text-align: right">2.0</td>
+          <td>(1.0 - 3.0)</td>
+          <td style="text-align: right"><span id="animalCount">-</span></td>
+        </tr>
+        <tr>
+
+          <th colspan="4">Mining</th>
+        </tr>
+        <tr>
+          <td>Coal Ore</td>
+          <td style="text-align: right">1.0</td>
+          <td>(0.0 - 2.0)</td>
+          <td style="text-align: right"><span id="oreCoalCount">-</span></td>
+        </tr>
+        <tr>
+          <td>Redstone Ore</td>
+          <td style="text-align: right">3.0</td>
+          <td>(1.0 - 5.0)</td>
+          <td style="text-align: right"><span id="oreRedstoneCount">-</span></td>
+        </tr>
+        <tr>
+          <td>Lapis Lazuli Ore</td>
+          <td style="text-align: right">3.5</td>
+          <td>(2.0 - 5.0)</td>
+          <td style="text-align: right"><span id="oreLapisCount">-</span></td>
+        </tr>
+        <tr>
+          <td>Quartz Ore</td>
+          <td style="text-align: right">3.5</td>
+          <td>(2.0 - 5.0)</td>
+          <td style="text-align: right"><span id="oreQuartzCount">-</span></td>
+        </tr>
+        <tr>
+          <td>Emerald Ore</td>
+          <td style="text-align: right">5.0</td>
+          <td>(3.0 - 7.0)</td>
+          <td style="text-align: right"><span id="oreEmeraldCount">-</span></td>
+        </tr>
+        <tr>
+          <td>Diamond Ore</td>
+          <td style="text-align: right">5.0</td>
+          <td>(3.0 - 7.0)</td>
+          <td style="text-align: right"><span id="oreDiamondCount">-</span></td>
+        </tr>
+
+        <tr>
+          <th colspan="4">Smelting</th>
+        </tr>
+        <tr>
+          <td>Smooth Stone</td>
+          <td style="text-align: right">0.1</td>
+          <td></td>
+          <td style="text-align: right"><span id="stoneCount">-</span></td>
+        </tr>
+        <tr>
+          <td>Tools or Armor</td>
+          <td style="text-align: right">0.1</td>
+          <td></td>
+          <td style="text-align: right"><span id="toolsCount">-</span></td>
+        </tr>
+        <tr>
+          <td>Glass</td>
+          <td style="text-align: right">0.1</td>
+          <td></td>
+          <td style="text-align: right"><span id="glassCount">-</span></td>
+        </tr>
+        <tr>
+          <td>Charcoal</td>
+          <td style="text-align: right">0.15</td>
+          <td></td>
+          <td style="text-align: right"><span id="charcoalCount">-</span></td>
+        </tr>
+	<tr>
+          <td>Wet Sponge</td>
+          <td style="text-align: right">0.15</td>
+          <td></td>
+          <td style="text-align: right"><span id="wetSpongeCount">-</span></td>
+        </tr>
+        <tr>
+          <td>Lapis Lazuli</td>
+          <td style="text-align: right">0.2</td>
+          <td></td>
+          <td style="text-align: right"><span id="lapisLazuliCount">-</span></td>
+        </tr>
+	<tr>
+          <td>Brick</td>
+          <td style="text-align: right">0.3</td>
+          <td></td>
+          <td style="text-align: right"><span id="brickCount">-</span></td>
+        </tr>
+        <tr>
+          <td>Cooked Food</td>
+          <td style="text-align: right">0.35</td>
+          <td></td>
+          <td style="text-align: right"><span id="cookedFoodCount">-</span></td>
+        </tr>
+        <tr>
+          <td>Redstone</td>
+          <td style="text-align: right">0.7</td>
+          <td></td>
+          <td style="text-align: right"><span id="redstoneCount">-</span></td>
+        </tr>
+        <tr>
+          <td>Iron</td>
+          <td style="text-align: right">0.7</td>
+          <td></td>
+          <td style="text-align: right"><span id="ironCount">-</span></td>
+        </tr>
+        <tr>
+          <td>Green Dye</td>
+          <td style="text-align: right">1.0</td>
+          <td></td>
+          <td style="text-align: right"><span id="cactusDyeCount">-</span></td>
+        </tr>
+        <tr>
+          <td>Gold</td>
+          <td style="text-align: right">1.0</td>
+          <td></td>
+          <td style="text-align: right"><span id="goldCount">-</span></td>
+        </tr>
+        <tr>
+          <td>Diamond</td>
+          <td style="text-align: right">1.0</td>
+          <td></td>
+          <td style="text-align: right"><span id="diamondCount">-</span></td>
+        </tr>
+        <tr>
+          <td>Ancient Debris</td>
+          <td style="text-align: right">2.0</td>
+          <td></td>
+          <td style="text-align: right"><span id="debrisCount">-</span></td>
+        </tr>
+
+        <tr>
+          <th colspan="4">Advancements</th>
+        </tr>
+        <tr>
+          <td>A Complete Catalogue</td>
+          <td style="text-align: right">50.0</td>
+          <td></td>
+          <td style="text-align: right"><span id="completeCatalogueCount">-</span></td>
+        </tr>
+        <tr>
+          <td>Great View From Up Here</td>
+          <td style="text-align: right">50.0</td>
+          <td></td>
+          <td style="text-align: right"><span id="greatViewCount">-</span></td>
+        </tr>
+        <tr>
+          <td>Return to Sender</td>
+          <td style="text-align: right">50.0</td>
+          <td></td>
+          <td style="text-align: right"><span id="returnSenderCount">-</span></td>
+        </tr>
+        <tr>
+          <td>Sniper Duel</td>
+          <td style="text-align: right">50.0</td>
+          <td></td>
+          <td style="text-align: right"><span id="sniperDuelCount">-</span></td>
+        </tr>
+        <tr>
+          <td>Two Birds, One Arrow</td>
+          <td style="text-align: right">65.0</td>
+          <td></td>
+          <td style="text-align: right"><span id="twoBirdsCount">-</span></td>
+        </tr>
+        <tr>
+        <td>
+        <div class="tooltip">
+        Arbalistic
+        <span class="tooltiptext">Kill five unique mobs with one crossbow shot</span>
+              
+        </div>
+        </td>
+          
+          <td style="text-align: right">85.0</td>
+          <td></td>
+          <td style="text-align: right"><span id="arbalisticCount">-</span></td>
+        </tr>
+        <tr>
+          <td>A Balanced Diet</td>
+          <td style="text-align: right">100.0</td>
+          <td></td>
+          <td style="text-align: right"><span id="balancedDietCount">-</span></td>
+        </tr>
+        <tr>
+          <td>A Furious Cocktail</td>
+          <td style="text-align: right">100.0</td>
+          <td></td>
+          <td style="text-align: right"><span id="furiousCocktailCount">-</span></td>
+        </tr>
+        <tr>
+          <td>Hero of the Village</td>
+          <td style="text-align: right">100.0</td>
+          <td></td>
+          <td style="text-align: right"><span id="heroCount">-</span></td>
+        </tr>
+        <tr>
+          <td>Monsters Hunted</td>
+          <td style="text-align: right">100.0</td>
+          <td></td>
+          <td style="text-align: right"><span id="monstersHuntedCount">-</span></td>
+        </tr>
+        <tr>
+          <td>Serious Dedication</td>
+          <td style="text-align: right">100.0</td>
+          <td></td>
+          <td style="text-align: right"><span id="seriousDedicationCount">-</span></td>
+        </tr>
+        <tr>
+          <td>Subspace Bubble</td>
+          <td style="text-align: right">100.0</td>
+          <td></td>
+          <td style="text-align: right"><span id="subspaceBubbleCount">-</span></td>
+        </tr>
+        <tr>
+          <td>Two By Two</td>
+          <td style="text-align: right">100.0</td>
+          <td></td>
+          <td style="text-align: right"><span id="twoByCount">-</span></td>
+        </tr>
+        <tr>
+          <td>Uneasy Alliance</td>
+          <td style="text-align: right">100.0</td>
+          <td></td>
+          <td style="text-align: right"><span id="uneasyAllianceCount">-</span></td>
+        </tr>
+        <tr>
+          <td>Adventuring Time</td>
+          <td style="text-align: right">500.0</td>
+          <td></td>
+          <td style="text-align: right"><span id="adventuringTimeCount">-</span></td>
+        </tr>
+        <tr>
+          <td>How Did We Get Here?</td>
+          <td style="text-align: right">1000.0</td>
+          <td></td>
+          <td style="text-align: right"><span id="howGetCount">-</span></td>
+        </tr>
+
+        <tr>
+          <th colspan="4">Other</th>
+        </tr>
+        <tr>
+          <td>Catching Fish</td>
+          <td style="text-align: right">2.5</td>
+          <td>(1.0 - 6.0)</td>
+          <td style="text-align: right"><span id="catchFishCount">-</span></td>
+        </tr>
+        <tr>
+          <td>Breed Mob</td>
+          <td style="text-align: right">4.0</td>
+          <td>(1.0 - 7.0)</td>
+          <td style="text-align: right"><span id="mobBreedCount">-</span></td>
+        </tr>
+        <tr>
+          <td>Trade with Villager</td>
+          <td style="text-align: right">4.5</td>
+          <td>(3.0 - 6.0)</td>
+          <td style="text-align: right"><span id="villagerTradeCount">-</span></td>
+        </tr>
+        <tr>
+          <td>Bottle o' Enchanting</td>
+          <td style="text-align: right">7.0</td>
+          <td>(3.0 - 11.0)</td>
+          <td style="text-align: right"><span id="potionCount">-</span></td>
+        </tr>
+        <tr>
+          <td>Mob Spawner</td>
+          <td style="text-align: right">29.0</td>
+          <td>(15.0 - 43.0)</td>
+          <td style="text-align: right"><span id="spawnerCount">-</span></td>
+        </tr>
+      </table>
+      </center>
+      </div>
+
+      <p>Notes:<ul>
+          <li>Tiny/Small/Big Slime categories include their Lava Slime counterparts.</li>
+          <li>An XP value like &quot;3.5 (2.0 - 5.0)&quot; indicates that the action randomly provides between 2.0 and 5.0 XP. The number of actions needed is calculated based on the average value (3.5 XP).</li>
+          <li>The XP values for smelting are multiplied by the number of items removed from the furnace, then any leftover fraction is awarded at random. For example, if you remove a stack of 8 iron ingots (0.7 XP each), since 0.7 * 8 = 5.6 you will always receive at least 5 XP, and 60% of the time you wil receive an additional 1 XP. (This all averages out, so there is no advantage to smelting in stacks of a particular size.)</li>
+        </ul>
+      </p>
+    </div>
+
+
+    </div>
+  </body>
+
+</html>

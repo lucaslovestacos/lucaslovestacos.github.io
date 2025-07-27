@@ -1,0 +1,8 @@
+@font-face{
+    font-family: 'MADE Tommy Soft';
+    src: url('made_tommy_soft-webfont.eot');
+    src: url('made_tommy_soft-webfont.eot?#iefix') format('embedded-opentype'),
+    url('made_tommy_soft-webfont.woff') format('woff'),
+    url('made_tommy_soft-webfont.ttf') format('truetype'),
+    url('made_tommy_soft-webfont.svg#webfont') format('svg');
+}

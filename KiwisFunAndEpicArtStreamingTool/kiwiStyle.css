@@ -1,0 +1,17 @@
+.header {
+	background: #1abc9c;
+}
+
+.button {
+	border: 3px solid #1abc9c;
+}
+            
+.button:hover {
+	background-color: #1abc9c;
+	border: 3px solid #1abc9c;      
+}
+
+.topnav a:hover {
+	background-color: #def7f2;
+	color: black;
+}
