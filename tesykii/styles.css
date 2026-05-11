@@ -8,6 +8,12 @@ body {
   margin: 0 auto;  /* Sets top/bottom to 0 and left/right to auto */
 }
 
+img {
+  display: block;
+  object-fit: scale-down;
+  overflow: hidden;
+}
+
 .container {
   grid-template-rows: 1fr 1fr;
   display: grid;
