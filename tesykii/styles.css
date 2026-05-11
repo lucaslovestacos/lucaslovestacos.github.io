@@ -7,4 +7,9 @@ div {
   display: grid;
   grid-template-columns: 100px auto;
   gap: 10px;
+  grid-template-rows: 50% 50%;
+}
+
+.section-news-bio {
+  grid-template-columns: 40% 60%;
 }
