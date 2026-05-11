@@ -26,3 +26,9 @@ div {
   grid-template-columns: 1fr 1fr;
   align-items: center;
 }
+
+ .center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
