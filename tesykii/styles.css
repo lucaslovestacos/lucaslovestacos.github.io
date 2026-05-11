@@ -3,6 +3,11 @@ div {
   padding: 10px;
 }
 
+body {
+  width: 66%;      /* Must have a width less than 100% */
+  margin: 0 auto;  /* Sets top/bottom to 0 and left/right to auto */
+}
+
 .container {
   grid-template-rows: 1fr 1fr;
   display: grid;
