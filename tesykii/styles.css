@@ -4,11 +4,23 @@ div {
 }
 
 .container {
-  grid-template-rows: 50% 50%;
+  grid-template-rows: 1fr 1fr;
 }
 
-.section-news-bio {
-  grid-template-columns: 40% 60%;
+.section {
+  grid-template-columns: 1fr 2fr;
   gap: 10px;
   display: grid;
+}
+
+.news {
+  overflow-y: auto;
+}
+
+.bio {
+  grid-template-rows: 1fr 2fr;
+}
+
+.bio-text {
+  grid-template-columns: 1fr 1fr;
 }
