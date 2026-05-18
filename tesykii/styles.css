@@ -1,12 +1,11 @@
 div {
-  border: thin solid black;
   padding: 10px;
 }
 
 html, body {
   height: 100vh; /* Occupy full screen height */
   margin: 0;
-  padding: 0;
+  padding: 0;    
 }
 
 body {
@@ -44,6 +43,8 @@ img {
 }
 
 .news {
+  background-color: 111111;
+  color: white;
   overflow-y: auto; /* Adds a scrollbar if text is too long */
 }
 
@@ -63,4 +64,9 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.buttons {
+  background-color: 111111;
+  color: white;
 }
