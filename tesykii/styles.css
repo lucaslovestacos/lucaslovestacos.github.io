@@ -12,6 +12,7 @@ body {
   background-image: url("https://cdn.mos.cms.futurecdn.net/LZUsfgcXH7WMeVvuHYsoSA.png");
   width: 66%;      /* Must have a width less than 100% */
   margin: 0 auto;  /* Sets top/bottom to 0 and left/right to auto */
+  font-family: Verdana, sans-serif;
 }
 
 img {
