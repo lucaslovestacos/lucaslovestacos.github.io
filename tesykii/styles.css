@@ -3,21 +3,28 @@ div {
   padding: 10px;
 }
 
+html, body {
+  height: 100vh; /* Occupy full screen height */
+  margin: 0;
+  padding: 0;
+}
+
 body {
   width: 66%;      /* Must have a width less than 100% */
   margin: 0 auto;  /* Sets top/bottom to 0 and left/right to auto */
 }
 
 img {
+  max-width: 100%;
+  max-height: 100%; /* Keep image inside the cell */
   display: block;
-  object-fit: scale-down;
-  overflow: hidden;
+  object-fit: contain;
 }
 
 .container {
-  grid-template-rows: 1fr 1fr;
   display: grid;
-  height: 100%;
+  grid-template-rows: minmax(0, 1fr) minmax(0, 1fr); /* Force rows to stay equal */
+  height: 100vh; /* Or 100% if body is set */
   box-sizing: border-box;
 }
 
@@ -34,11 +41,13 @@ img {
 }
 
 .news {
-  overflow-y: auto;
+  overflow-y: auto; /* Adds a scrollbar if text is too long */
 }
 
+
 .bio {
-  grid-template-rows: 1fr 2fr;
+  display: grid; /* Make sure this is a grid too */
+  grid-template-rows: minmax(0, 1fr) minmax(0, 2fr);
 }
 
 .bio-text {
