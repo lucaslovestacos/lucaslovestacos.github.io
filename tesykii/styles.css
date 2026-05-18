@@ -10,6 +10,7 @@ html, body {
 }
 
 body {
+  background-image: url("https://cdn.mos.cms.futurecdn.net/LZUsfgcXH7WMeVvuHYsoSA.png");
   width: 66%;      /* Must have a width less than 100% */
   margin: 0 auto;  /* Sets top/bottom to 0 and left/right to auto */
 }
@@ -26,6 +27,8 @@ img {
   grid-template-rows: minmax(0, 1fr) minmax(0, 1fr); /* Force rows to stay equal */
   height: 100vh; /* Or 100% if body is set */
   box-sizing: border-box;
+  /* Step 1: The 'Outline' Color */
+  background-color: #AAAAAAaa;
 }
 
 .upper-section {
