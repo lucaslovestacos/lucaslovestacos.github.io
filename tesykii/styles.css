@@ -1,33 +1,37 @@
+* {
+  box-sizing: border-box;
+  min-height: 0;
+}
+
 div {
   padding: 10px;
 }
 
 html, body {
-  height: 100vh; /* Occupy full screen height */
+  height: 100vh;
   margin: 0;
   padding: 0;    
 }
 
 body {
   background-image: url("https://cdn.mos.cms.futurecdn.net/LZUsfgcXH7WMeVvuHYsoSA.png");
-  width: 66%;      /* Must have a width less than 100% */
-  margin: 0 auto;  /* Sets top/bottom to 0 and left/right to auto */
+  width: 66%;
+  margin: 0 auto;
   font-family: Verdana, sans-serif;
 }
 
 img {
   max-width: 100%;
-  max-height: 100%; /* Keep image inside the cell */
+  max-height: 100%;
   display: block;
   object-fit: contain;
 }
 
 .container {
   display: grid;
-  grid-template-rows: minmax(0, 1fr) minmax(0, 1fr); /* Force rows to stay equal */
-  height: 100vh; /* Or 100% if body is set */
+  grid-template-rows: minmax(0, 1fr) minmax(0, 1fr);
+  height: 100vh;
   box-sizing: border-box;
-  /* Step 1: The 'Outline' Color */
   background-color: #AAAAAAaa;
 }
 
@@ -46,19 +50,20 @@ img {
 .news {
   background-color: 111111;
   color: white;
-  overflow-y: auto; /* Adds a scrollbar if text is too long */
+  overflow-y: auto;
 }
 
 
 .bio {
-  display: grid; /* Make sure this is a grid too */
+  display: grid;
   grid-template-rows: minmax(0, 1fr) minmax(0, 2fr);
 }
 
 .bio-text {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  align-items: center;
+  min-height: 0; 
+  height: 100%;
 }
 
  .center {
